@@ -137,6 +137,7 @@ set -g @tokyo-night-tmux_show_music 1
 ```
 
 #### Netspeed widget
+
 ![Snap netspeed](snaps/netspeed.png)
 
 ```bash
@@ -173,6 +174,7 @@ set -g @tokyo-night-tmux_show_wbg 1
 ```
 
 The widget works with both SSH and HTTPS git remote URLs:
+
 - SSH: `git@github.com:user/repo.git`
 - HTTPS: `https://github.com/user/repo.git`
 
@@ -182,6 +184,21 @@ Set variable value `0` to disable the widget. Remember to restart `tmux` after c
 
 ```bash
 set -g @tokyo-night-tmux_show_hostname 1
+```
+
+#### System Monitor Widget
+
+Shows CPU usage (as a percentage) and RAM usage (as `used/total GB`) in the status line. Disabled by default.
+
+```bash
+set -g @tokyo-night-tmux_show_system_monitor 1
+```
+
+Each metric has a configurable prefix (icon or label). Defaults are Nerd Font icons; override with any string:
+
+```bash
+set -g @tokyo-night-tmux_system_monitor_cpu_prefix 'CPU '
+set -g @tokyo-night-tmux_system_monitor_ram_prefix 'RAM '
 ```
 
 ## Styles
@@ -224,7 +241,7 @@ so it's independent of terminal theme.
 
 ### Demo
 
-https://github.com/janoamaral/tokyo-night-tmux/assets/10008708/59ecd814-bc2b-47f2-82b1-ffdbfbc54fbf
+<https://github.com/janoamaral/tokyo-night-tmux/assets/10008708/59ecd814-bc2b-47f2-82b1-ffdbfbc54fbf>
 
 ### Snapshots
 
@@ -251,7 +268,6 @@ run against any raised PRs.
 [pre-commit]: https://pre-commit.com/
 [Noto Sans]: https://fonts.google.com/noto/specimen/Noto+Sans
 [Nerd Fonts]: https://www.nerdfonts.com/
-[coreutils]: https://www.gnu.org/software/coreutils/
 [bc]: https://www.gnu.org/software/bc/
 [jq]: https://jqlang.github.io/jq/
 [playerctl]: https://github.com/altdesktop/playerctl
